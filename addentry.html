@@ -1,0 +1,213 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- addentry.html
+     -->
+    
+     <html xmlns = "http://www.w3.org/1999/xhtml">
+     <head> <title> Add entry to my blog!  </title>
+     
+     <style type="text/css">
+     	body{height: 100%; margin:0;}
+     
+       	#header{
+     		width: 90%;
+     		padding: 0px;
+     		margin: 0px;
+     		text-align: center;
+     		height: 90px;
+     		background-color: #ecd8c6;
+     		margin-left: auto;
+     		margin-right: auto;
+     		border-style: groove;
+     	}
+     	
+     	#header img{
+     		margin-top: 10px;
+     	}
+     	
+     
+     	#main{
+     	
+     		width: 85%;
+     		padding: 5px;
+     		margin-top: 10px;
+     		margin-bottom: 50px;
+     		margin-left: auto;
+     		margin-right: auto;
+     	}
+     	
+     	#content{
+     		background-color:  #ecd8c6;	
+     	}
+     	
+     	.content-container{
+     		float: left;
+     		width: calc(75% - 50px);
+     		margin-right: 0;
+     		margin-top:20px;
+     		margin-bottom: 20px;
+     		border-color: #818181;
+     		border-width: 1px;
+     		border-style: groove;
+     	}
+
+     	#navbar{
+     		width: 25%;
+     		height: 60%;
+     		background-color:  #ecd8c6;
+     		padding: 10px;
+     		margin-top: 20px;
+     		float: right;
+     		border-color: #818181;
+     		border-style: dashed;
+     		border-width: 1px;
+     	}
+     	
+     	#navbar ul{
+     		list-style-type: none;
+     		}
+     	
+     	#navbar ul a{
+     		color: white;
+     		text-decoration: none;
+     		font-size: 18px;
+
+     	}
+     	
+     	#navbar ul span{
+     		color: white;
+     		text-decoration: none;
+     		font-size: 18px;
+     		}
+     	
+     	
+     	#navbar ul a:hover{
+     		background-color: black;
+     		color: #ecd8c6;
+     	
+     	}
+     
+     	#navbar ul span:hover{
+     		background-color: white;
+     		color: #ecd8c6;
+     	
+     	}
+     
+     	#date{
+     		padding: 8px 8px 8px 10px;
+     		background-color: white;
+     	}
+     	
+     	#title{
+     		font: italic bold 24px;
+     		color: #808080;
+     		padding: 8px 8px 8px 10px;
+     	
+     	}
+     	
+     	hr{
+     		display:block;
+     		position: relative;
+     		padding: 0;
+     		margin: 8px auto;
+     		height: 0;
+     		width: 100%;
+     		max-height: 0;
+     		font-size: 1px;
+     		line-height: 0;
+     		clear: both;
+     		border: none;
+     		border-top: 1px solid #aaaaaa;
+     		border-bottom: 1px solid #ffffff; 
+     	
+     	}
+     	
+     	.sidebar {
+     	margin-top: 125px;
+		height: 200px;
+    	width: 0;
+    	position: fixed;
+    	z-index: 1;
+    	top: 60px; /*<!--0-->*/
+    	right: 0;
+    	background-color: #111;
+    	overflow-x: hidden;
+    	transition: 0.3s;
+    	float: right;
+    	opacity: 0.8;
+
+	}
+
+		.sidebar a {
+    	padding: 8px 8px 8px 32px;
+    	text-decoration: none;
+    	font-size: 25px;
+    	color: #818181;
+    	display: block;
+    	transition: 0.3s;
+	}
+
+		.sidebar a:hover, .offcanvas a:focus{
+    	color: #f1f1f1;
+	}
+
+		.sidebar .closebtn {
+    	position: relative;
+    	font-size: 36px;
+	}
+	
+		.sidebar .fb-share-button{
+			margin-left: 20px;
+			
+		}
+		
+		.sidebar .twitter{
+
+    		margin-top: 10px;
+    		margin-left: 20px;
+		}
+     	
+ 
+     	
+     </style>
+
+     <script>
+     	
+        function clearFunction(e){
+            if(!confirm("Are you sure you wish to clear your masterpiece?"))e.preventDefault();}
+
+     	</script>
+     	
+     
+     </head>
+    
+     
+     <body>
+     <h3> Add an entry to your blog!</h3>
+     
+     <p> Enter a title and entry for your blog! In the entry you can use simple HTML
+     formatting elements, such as &#60;b&#62; (bold) and &#60;i&#62; (italic) as well as the hyperlink 
+     "anchor" element &#60;a&#62;. </p>
+     
+     <form action="addentry.php" method = "post">
+     	<div class = "container">
+     	
+     	<p> Title: <input type = "text" name = "title" size = 30/>
+     	</p>
+     	
+     	<p> Entry: <textarea name = "entry" rows = "10" cols="30"> </textarea>
+     	</p>
+     	
+     	<button type = "submit"> Add entry </button>
+     	<input onclick="clearFunction(event)"  type="reset" value="Clear"/>
+     	
+		<a href ="http://webprojects.eecs.qmul.ac.uk/hc303/blog/viewBlog.php" class="button">Go directly to the blog instead</a>
+		
+		     	
+     	</div>
+     </form>
+     
+     </body>
+     
+     </html>
